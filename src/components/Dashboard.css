@@ -1,0 +1,27 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard .page-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+.dashboard .page-list .page.item {
+  border: 1px solid #333;
+  border-radius: 20px;
+  width: 215px;
+  height: 250px;
+  margin: 20px 10px;
+}
+.dashboard .page-list .page.item .page__title {
+  padding-left: 10px;
+  border-bottom: 1px solid #333;
+}
+
+/*# sourceMappingURL=Dashboard.css.map */
