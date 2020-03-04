@@ -29,15 +29,27 @@
       width: $pageItemWidth - ($pageItemBorderWidth * 2);
       height: $pageItemHeight;
       margin: 20px 10px;
+      cursor: pointer;
 
       .page__title {
         $pageTitleOffsetLeft: $pageItemBorderRadius * 0.75;
 
         width: $pageItemWidth - ($pageItemBorderWidth * 2) - $pageTitleOffsetLeft;
         padding-left: $pageTitleOffsetLeft;
+        padding-top: 2px;
         padding-bottom: 2px;
         border-bottom: 1px solid #333;
         font-size: $text-size-normal;
+        font-family: 'Varela Round';
+      }
+
+      .page__type {
+        width: $pageItemWidth - ($pageItemBorderWidth * 2);
+        text-align: center;
+
+        i {
+          font-size: 40px;
+        }
       }
 
       .page__footer {

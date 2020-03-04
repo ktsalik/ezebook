@@ -3,6 +3,7 @@ import moment from 'moment';
 import './Dashboard.css';
 import PageModel from '../../Page';
 import PagePublishDate from '../PagePublishDate';
+import PageType from '../PageType';
 
 class Dashboard extends React.Component {
   constructor() {
@@ -52,8 +53,13 @@ class Dashboard extends React.Component {
               <div className="page__title">
                 {page.title}
               </div>
+              <div className="page__type">
+                <PageType
+                  page={page}
+                />
+              </div>
               <div className="page__footer">
-                <PagePublishDate 
+                <PagePublishDate
                   page={page}
                 />
               </div>

@@ -24,14 +24,26 @@
   width: 218px;
   height: 250px;
   margin: 20px 10px;
+  cursor: pointer;
 }
 
 .dashboard .page-list .page.item .page__title {
   width: 204.5px;
   padding-left: 13.5px;
+  padding-top: 2px;
   padding-bottom: 2px;
   border-bottom: 1px solid #333;
   font-size: 16px;
+  font-family: "Varela Round";
+}
+
+.dashboard .page-list .page.item .page__type {
+  width: 218px;
+  text-align: center;
+}
+
+.dashboard .page-list .page.item .page__type i {
+  font-size: 40px;
 }
 
 .dashboard .page-list .page.item .page__footer {
@@ -41,17 +53,6 @@
   font-size: 13px;
 }
 
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
 /*# sourceMappingURL=dashboard.css.map */
 /*# sourceMappingURL=dashboard.css.map */
 /*# sourceMappingURL=dashboard.css.map */
