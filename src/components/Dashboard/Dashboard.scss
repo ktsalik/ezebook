@@ -24,12 +24,13 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      border: $pageItemBorderWidth solid #888;
-      border-radius: $pageItemBorderRadius;
       width: $pageItemWidth - ($pageItemBorderWidth * 2);
       height: $pageItemHeight;
+      border: $pageItemBorderWidth solid #888;
+      border-radius: $pageItemBorderRadius;
       margin: 20px 10px;
       cursor: pointer;
+      background-color: #F9F9F9;
       transition: background-color 0.333s;
 
       &:hover {
