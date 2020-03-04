@@ -24,12 +24,22 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      border: $pageItemBorderWidth solid #333;
+      border: $pageItemBorderWidth solid #888;
       border-radius: $pageItemBorderRadius;
       width: $pageItemWidth - ($pageItemBorderWidth * 2);
       height: $pageItemHeight;
       margin: 20px 10px;
       cursor: pointer;
+      transition: background-color 0.333s;
+
+      &:hover {
+        border-color: #DEDEDE;
+        background-color: #FFF;
+
+        .page__title {
+          border-color: #DEDEDE;
+        }
+      }
 
       .page__title {
         $pageTitleOffsetLeft: $pageItemBorderRadius * 0.75;
@@ -38,7 +48,7 @@
         padding-left: $pageTitleOffsetLeft;
         padding-top: 2px;
         padding-bottom: 2px;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid #888;
         font-size: $text-size-normal;
         font-family: 'Varela Round';
       }
@@ -54,7 +64,6 @@
 
       .page__footer {
         width: $pageItemWidth - ($pageItemBorderWidth * 2);
-        border-top: 1px solid #333;
         text-align: center;
         font-size: $text-size-small;
       }

@@ -19,12 +19,22 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px solid #333;
+  border: 1px solid #888;
   border-radius: 18px;
   width: 218px;
   height: 250px;
   margin: 20px 10px;
   cursor: pointer;
+  transition: background-color 0.333s;
+}
+
+.dashboard .page-list .page.item:hover {
+  border-color: #DEDEDE;
+  background-color: #FFF;
+}
+
+.dashboard .page-list .page.item:hover .page__title {
+  border-color: #DEDEDE;
 }
 
 .dashboard .page-list .page.item .page__title {
@@ -32,7 +42,7 @@
   padding-left: 13.5px;
   padding-top: 2px;
   padding-bottom: 2px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #888;
   font-size: 16px;
   font-family: "Varela Round";
 }
@@ -48,11 +58,12 @@
 
 .dashboard .page-list .page.item .page__footer {
   width: 218px;
-  border-top: 1px solid #333;
   text-align: center;
   font-size: 13px;
 }
 
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
 /*# sourceMappingURL=dashboard.css.map */
 /*# sourceMappingURL=dashboard.css.map */
 /*# sourceMappingURL=dashboard.css.map */
