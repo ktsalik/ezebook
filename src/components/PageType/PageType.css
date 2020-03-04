@@ -1,0 +1,22 @@
+.page-type .tooltip {
+  position: fixed;
+  border-radius: 2px;
+  padding: 3px;
+  background-color: #333;
+  color: #EFEFEF;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: opacity 0.5s;
+}
+
+.page-type .tooltip.open {
+  opacity: 1;
+}
+
+.page-type .tooltip.closed {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=pagetype.css.map */
+
+/*# sourceMappingURL=pagetype.css.map */

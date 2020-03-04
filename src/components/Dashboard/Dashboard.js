@@ -3,7 +3,7 @@ import moment from 'moment';
 import './Dashboard.css';
 import PageModel from '../../Page';
 import PagePublishDate from '../PagePublishDate';
-import PageType from '../PageType';
+import PageType from '../PageType/PageType';
 
 class Dashboard extends React.Component {
   constructor() {

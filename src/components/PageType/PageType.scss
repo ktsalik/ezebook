@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.page-type {
+  
+  .tooltip {
+    position: fixed;
+    border-radius: 2px;
+    padding: 3px;
+    background-color: #333;
+    color: #EFEFEF;
+    font-size: $text-size-small;
+    white-space: nowrap;
+    transition: opacity 0.5s;
+
+    &.open {
+      opacity: 1;
+    }
+
+    &.closed {
+      opacity: 0;
+    }
+  }
+}
