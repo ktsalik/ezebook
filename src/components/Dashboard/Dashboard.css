@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.dashboard .page-list {
+.dashboard .pages-list {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -14,7 +14,7 @@
   max-width: 1200px;
 }
 
-.dashboard .page-list .page.item {
+.dashboard .pages-list .page.item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,16 +28,16 @@
   transition: background-color 0.333s;
 }
 
-.dashboard .page-list .page.item:hover {
+.dashboard .pages-list .page.item:hover {
   border-color: #DEDEDE;
   background-color: #FFF;
 }
 
-.dashboard .page-list .page.item:hover .page__title {
+.dashboard .pages-list .page.item:hover .page__title {
   border-color: #DEDEDE;
 }
 
-.dashboard .page-list .page.item .page__title {
+.dashboard .pages-list .page.item .page__title {
   width: 204.5px;
   padding-left: 13.5px;
   padding-top: 2px;
@@ -47,16 +47,16 @@
   font-family: "Varela Round";
 }
 
-.dashboard .page-list .page.item .page__type {
+.dashboard .pages-list .page.item .page__type {
   width: 218px;
   text-align: center;
 }
 
-.dashboard .page-list .page.item .page__type i {
+.dashboard .pages-list .page.item .page__type i {
   font-size: 40px;
 }
 
-.dashboard .page-list .page.item .page__footer {
+.dashboard .pages-list .page.item .page__footer {
   width: 218px;
   text-align: center;
   font-size: 13px;

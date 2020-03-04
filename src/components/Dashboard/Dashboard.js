@@ -44,7 +44,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard">
-        <div className="page-list">
+        <div className="pages-list">
           {this.state.view.pages.map(page => (
             <div 
               className="page item"
