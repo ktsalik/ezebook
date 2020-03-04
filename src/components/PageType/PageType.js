@@ -24,7 +24,7 @@ class PageType extends React.Component {
         });
         let tooltipEl = el.querySelector('.tooltip');
         tooltipEl.style.top = (el.getBoundingClientRect().top) - (tooltipEl.offsetHeight) + 'px';
-        tooltipEl.style.left = (el.querySelector('i').getBoundingClientRect().left) + 'px';
+        tooltipEl.style.left = (el.querySelector('.icon').getBoundingClientRect().left) + 'px';
       }, 500);
     };
 
@@ -41,16 +41,16 @@ class PageType extends React.Component {
       let icon;
       switch (type) {
         case 0:
-          icon = <i className="material-icons">menu_open</i>;
+          icon = <i className="icon material-icons">menu_open</i>;
           break;
         case 1:
-          icon = <i className="material-icons">error_outline</i>;
+          icon = <i className="icon material-icons">error_outline</i>;
           break;
         case 2:
-          icon = <i className="material-icons">dashboard</i>;
+          icon = <i className="icon material-icons">dashboard</i>;
           break;
         default:
-          icon = <i className="material-icons">help</i>;
+          icon = <i className="icon material-icons">help</i>;
       }
       return icon;
     };

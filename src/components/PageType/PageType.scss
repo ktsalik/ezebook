@@ -1,7 +1,11 @@
 @import '../../variables';
 
 .page-type {
-  
+
+  .icon {
+    color: #777;
+  }
+
   .tooltip {
     position: fixed;
     border-radius: 2px;
@@ -13,7 +17,7 @@
     transition: opacity 0.5s;
 
     &.open {
-      opacity: 1;
+      opacity: 0.85;
     }
 
     &.closed {
