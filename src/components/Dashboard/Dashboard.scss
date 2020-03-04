@@ -1,0 +1,51 @@
+@import '../../_variables';
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .page-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+
+    .page.item {
+      $pageItemWidth: 220px;
+      $pageItemHeight: 250px;
+      $pageItemBorderWidth: 1px;
+      $pageItemBorderRadius: 18px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      border: $pageItemBorderWidth solid #333;
+      border-radius: $pageItemBorderRadius;
+      width: $pageItemWidth - ($pageItemBorderWidth * 2);
+      height: $pageItemHeight;
+      margin: 20px 10px;
+
+      .page__title {
+        $pageTitleOffsetLeft: $pageItemBorderRadius * 0.75;
+
+        width: $pageItemWidth - ($pageItemBorderWidth * 2) - $pageTitleOffsetLeft;
+        padding-left: $pageTitleOffsetLeft;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #333;
+        font-size: $text-size-normal;
+      }
+
+      .page__footer {
+        width: $pageItemWidth - ($pageItemBorderWidth * 2);
+        border-top: 1px solid #333;
+        text-align: center;
+        font-size: $text-size-small;
+      }
+    }
+  }
+}

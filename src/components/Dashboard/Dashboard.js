@@ -1,6 +1,8 @@
 import React from 'react';
+import moment from 'moment';
 import './Dashboard.css';
-import PageModel from '../Page.js';
+import PageModel from '../../Page';
+import PagePublishDate from '../PagePublishDate';
 
 class Dashboard extends React.Component {
   constructor() {
@@ -14,7 +16,7 @@ class Dashboard extends React.Component {
     };
 
     PageModel.getPages().then(data => {
-      // sort pages by desc id
+      // sort pages data by desc id
       data.sort((a, b) => {
         if (a.id > b.id) {
           return -1;
@@ -22,7 +24,12 @@ class Dashboard extends React.Component {
           return 1;
         }
       });
-      // update state
+      // process pages data
+      data.forEach(page => {
+        page.publishedOnDate = moment(page.publishedOn).format('DD-MM-YYYY HH:mm');
+        page.publishedOnAgo = moment(page.publishedOn).fromNow();
+      });
+      // update state with pages data
       this.setState({
         pages: data,
         view: {
@@ -44,6 +51,11 @@ class Dashboard extends React.Component {
             >
               <div className="page__title">
                 {page.title}
+              </div>
+              <div className="page__footer">
+                <PagePublishDate 
+                  page={page}
+                />
               </div>
             </div>
           ))}

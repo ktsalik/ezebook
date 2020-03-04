@@ -1,0 +1,60 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard .page-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.dashboard .page-list .page.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #333;
+  border-radius: 18px;
+  width: 218px;
+  height: 250px;
+  margin: 20px 10px;
+}
+
+.dashboard .page-list .page.item .page__title {
+  width: 204.5px;
+  padding-left: 13.5px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+}
+
+.dashboard .page-list .page.item .page__footer {
+  width: 218px;
+  border-top: 1px solid #333;
+  text-align: center;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+
+/*# sourceMappingURL=dashboard.css.map */
