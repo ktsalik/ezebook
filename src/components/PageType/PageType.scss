@@ -17,10 +17,12 @@
     transition: opacity 0.5s;
 
     &.open {
+      visibility: visible;
       opacity: 0.85;
     }
 
     &.closed {
+      visibility: hidden;
       opacity: 0;
     }
   }
