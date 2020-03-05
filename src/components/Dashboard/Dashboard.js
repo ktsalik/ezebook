@@ -4,6 +4,7 @@ import './Dashboard.css';
 import PageModel from '../../Page';
 import PagePublishDate from '../PagePublishDate/PagePublishDate';
 import PageType from '../PageType/PageType';
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 
 class Dashboard extends React.Component {
   constructor() {
@@ -39,11 +40,30 @@ class Dashboard extends React.Component {
         }
       });
     });
+
+    this.onDarkModeChange = this.onDarkModeChange.bind(this);
+  }
+
+  onDarkModeChange(state) {
+    this.props.onDarkModeChange(state);
   }
 
   render() {
     return (
-      <div className="dashboard">
+      <div className={`dashboard ${this.props.darkMode == 'on' ? 'dark' : 'light'}`}>
+        <div className="toolbar">
+          <div className="btn-new-page">
+            <button>+</button>
+          </div>
+          <div className="search-bar">
+            <input type="text"></input>
+          </div>
+          <div className="dark-mode">
+            <DarkModeToggle 
+              onChange={this.onDarkModeChange}
+            />
+          </div>
+        </div>
         <div className="pages-list">
           {this.state.view.pages.map(page => (
             <div 

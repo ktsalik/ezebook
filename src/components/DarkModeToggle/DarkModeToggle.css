@@ -1,0 +1,35 @@
+.dark-mode-toggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.dark-mode-toggle .bullet {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #555;
+  transition: left 0.222s;
+}
+
+.dark-mode-toggle .bullet.active {
+  left: 50%;
+}
+
+.dark-mode-toggle.dark {
+  background-color: #555;
+}
+
+.dark-mode-toggle.dark .bullet {
+  background-color: #BBB;
+}
+
+/*# sourceMappingURL=darkmodetoggle.css.map */
+
+/*# sourceMappingURL=darkmodetoggle.css.map */

@@ -8,18 +8,39 @@ import {
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard.js';
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/">
-            <Dashboard />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      darkMode: false,
+    };
+
+    this.onDarkModeChange = this.onDarkModeChange.bind(this);
+  }
+
+  onDarkModeChange(state) {
+    this.setState({
+      darkMode: state,
+    });
+  }
+
+  render() {
+    return (
+      <div className={`App ${this.state.darkMode == 'on' ? 'dark' : 'light'}`}>
+        <Router>
+          <Switch>
+            <Route path="/">
+              <Dashboard
+                darkMode={this.state.darkMode}
+                onDarkModeChange={this.onDarkModeChange}
+              />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

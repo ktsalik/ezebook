@@ -1,8 +1,18 @@
 .dashboard {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.dashboard .toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: calc(1200px - 10px - 10px);
+  padding: 10px;
 }
 
 .dashboard .pages-list {
@@ -64,6 +74,39 @@
   color: #888;
 }
 
+.dashboard.dark .page.item {
+  background-color: #222;
+  border-color: #AAA;
+}
+
+.dashboard.dark .page.item:hover {
+  border-color: #777;
+  background-color: #444;
+}
+
+.dashboard.dark .page.item:hover .page__title {
+  border-color: #777;
+  color: #CCC;
+}
+
+.dashboard.dark .page.item:hover .page__footer {
+  color: #CCC;
+}
+
+.dashboard.dark .page.item .page__title {
+  color: #BBB;
+  border-color: #AAA;
+}
+
+.dashboard.dark .page.item .page__footer {
+  color: #AAA;
+}
+
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
 /*# sourceMappingURL=dashboard.css.map */
 
 /*# sourceMappingURL=dashboard.css.map */

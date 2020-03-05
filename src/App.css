@@ -1,3 +1,7 @@
 .App {
   background-color: #EEE;
 }
+
+.App.dark {
+  background-color: #121212;
+}
