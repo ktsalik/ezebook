@@ -24,7 +24,7 @@ class PageType extends React.Component {
         });
         let tooltipEl = el.querySelector('.tooltip');
         tooltipEl.style.top = (el.getBoundingClientRect().top) - (tooltipEl.offsetHeight) + 'px';
-        tooltipEl.style.left = (el.querySelector('.icon').getBoundingClientRect().left) + 'px';
+        tooltipEl.style.left = (el.querySelector('.icon').getBoundingClientRect().left) - ((tooltipEl.offsetWidth - el.querySelector('.icon').offsetWidth) / 2) + 'px';
       }, 500);
     };
 
