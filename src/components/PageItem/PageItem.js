@@ -13,7 +13,10 @@ class PageItem extends React.Component {
       <div
         className={`page item ${this.props.darkMode === 'on' ? 'dark' : ''}`}
       >
-        <div className="page__title-container">
+        <div
+          className="page__title-container" 
+          title={this.props.page.title}
+        >
           {this.props.page.title}
           {!this.props.page.title ? <div className="page__title-ghost"></div> : undefined}
         </div>

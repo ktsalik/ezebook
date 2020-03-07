@@ -32,6 +32,7 @@
   font-size: 16px;
   font-family: "Varela Round";
   color: #343434;
+  white-space: nowrap;
 }
 .page.item .page__title-ghost {
   width: 66.666%;
