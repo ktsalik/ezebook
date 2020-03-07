@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 218px;
+  max-width: 100%;
   height: 250px;
   border: 1px solid #EEE;
   border-radius: 10px;
@@ -21,6 +22,9 @@
 }
 .page.item .page__title-container {
   width: 210.5px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding-left: 7.5px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -39,6 +43,7 @@
 .page.item .page__type-container {
   width: 218px;
   text-align: center;
+  width: 100%;
 }
 .page.item .page__type-container i {
   font-size: 30px;
@@ -50,6 +55,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 .page.item .page__footer .page__publish-date-ghost {
   width: 50%;

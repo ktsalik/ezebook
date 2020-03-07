@@ -13,13 +13,23 @@
   max-width: calc(1200px - 10px - 10px);
   padding: 10px;
 }
+.dashboard .toolbar .search-bar-container {
+  max-width: 100%;
+}
 .dashboard .pages-list {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
   max-width: 1200px;
+}
+
+@media only screen and (max-width: 479px) {
+  .dashboard .toolbar {
+    flex-direction: column-reverse;
+  }
 }
 
 /*# sourceMappingURL=Dashboard.css.map */

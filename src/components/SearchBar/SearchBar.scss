@@ -1,0 +1,47 @@
+.search-bar {
+  position: relative;
+
+  .placeholder {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    color: #BBB;
+  }
+
+  input {
+    outline: none;
+    width: 350px;
+    max-width: 80%;
+    height: 20px;
+    border-radius: 17px;
+    padding: 7px 15px;
+    border: 1px solid #DEDEDE;
+    font-size: 17px;
+  }
+
+  .btn-clear {
+    position: absolute;
+    top: 5px;
+    right: 15%;
+    color: #CCC;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &.dark {
+    
+    .placeholder {
+      color: #999;
+    }
+
+    input {
+      background-color: #333;
+      border-color: #999;
+      color: #EFEFEF;
+    }
+
+    .btn-clear {
+      color: #CCC;
+    }
+  }
+}

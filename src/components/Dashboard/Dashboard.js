@@ -4,6 +4,7 @@ import './Dashboard.css';
 import PageModel from '../../Page';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import PageItem from '../PageItem/PageItem';
+import SearchBar from '../SearchBar/SearchBar';
 
 class Dashboard extends React.Component {
   constructor() {
@@ -41,10 +42,29 @@ class Dashboard extends React.Component {
     });
 
     this.onDarkModeChange = this.onDarkModeChange.bind(this);
+    this.onSearchTermChange = this.onSearchTermChange.bind(this);
   }
 
   onDarkModeChange(state) {
     this.props.onDarkModeChange(state);
+  }
+
+  onSearchTermChange(value) {
+    if (value.trim().length > 0) {
+      this.setState({
+        view: {
+          ...this.state.view,
+          pages: this.state.pages.filter(page => page.title.includes(value)),
+        },
+      });
+    } else {
+      this.setState({
+        view: {
+          ...this.state.view,
+          pages: this.state.pages,
+        }
+      });
+    }
   }
 
   render() {
@@ -54,8 +74,11 @@ class Dashboard extends React.Component {
           <div className="btn-new-page">
             <button>+</button>
           </div>
-          <div className="search-bar">
-            <input type="text"></input>
+          <div className="search-bar-container">
+            <SearchBar 
+              onChange={this.onSearchTermChange}
+              darkMode={this.props.darkMode}
+            />
           </div>
           <div className="dark-mode">
             <DarkModeToggle 

@@ -38,6 +38,13 @@ class PagePublishDate extends React.Component {
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
         onClick={this.onClick}
+        style={{
+          width: '100%',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+          textAlign: 'center',
+        }}
       >
         {this.state.showTimeAgo ? this.props.page.publishedOnAgo : this.props.page.publishedOnDate}
       </div>
