@@ -85,7 +85,8 @@ class Dashboard extends React.Component {
             />
           </div>
           <div className="dark-mode">
-            <DarkModeToggle 
+            <DarkModeToggle
+              darkMode={this.props.darkMode}
               onChange={this.onDarkModeChange}
             />
           </div>

@@ -6,7 +6,7 @@ class DarkModeToggle extends React.Component {
     super(props);
 
     this.state = {
-      active: false,
+      active: this.props.darkMode === 'on',
     };
     
     this.onClick = this.onClick.bind(this);
