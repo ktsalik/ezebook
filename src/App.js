@@ -27,7 +27,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={`App ${this.state.darkMode == 'on' ? 'dark' : 'light'}`}>
+      <div className={`App ${this.state.darkMode === 'on' ? 'dark' : 'light'}`}>
         <Router>
           <Switch>
             <Route path="/">
