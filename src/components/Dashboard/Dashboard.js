@@ -19,8 +19,35 @@ class Dashboard extends React.Component {
         // 20 empty object with an id
         pages: new Array(20).fill().map((_, i) => ({ id: i })),
       },
+      iconsLoaded: false,
     };
 
+    let checkTextFontsInterval;
+    window.addEventListener('load', () => {
+      checkTextFontsInterval = setInterval(() => {
+        // check if font-family "Varela Round" has loaded and only then get pages data
+        if (this.state.pages.length === 0 && document.fonts.check('1px "Varela Round"')) {
+          clearTimeout(checkTextFontsInterval); // stop checking
+          this.getPages(); // get pages data
+        }
+      }, 100);
+    });
+
+    let checkIconsFontsInterval = setInterval(() => {
+      this.setState({
+        iconsLoaded: document.fonts.check('1px "Material Icons"'),
+      });
+      if (this.state.iconsLoaded) {
+        clearInterval(checkIconsFontsInterval);
+      }
+    });
+
+    this.onDarkModeChange = this.onDarkModeChange.bind(this);
+    this.onSearchTermChange = this.onSearchTermChange.bind(this);
+    this.getPages = this.getPages.bind(this);
+  }
+
+  getPages() {
     PageModel.getPages().then(data => {
       // sort pages data by desc id
       data.sort((a, b) => {
@@ -44,9 +71,6 @@ class Dashboard extends React.Component {
         }
       });
     });
-
-    this.onDarkModeChange = this.onDarkModeChange.bind(this);
-    this.onSearchTermChange = this.onSearchTermChange.bind(this);
   }
 
   onDarkModeChange(state) {
@@ -79,7 +103,11 @@ class Dashboard extends React.Component {
         <div className="toolbar">
           <Link to="/create-page" className="btn-create-page">
             <div className="btn-create-page__title">Create Page</div>
-            <i className="material-icons">add</i>
+            {
+              this.state.iconsLoaded
+                ? <i className="material-icons">add</i>
+                : undefined
+            }
           </Link>
           <div className="search-bar-container">
             <SearchBar 
@@ -100,6 +128,7 @@ class Dashboard extends React.Component {
               key={page.id}
               page={page}
               darkMode={this.props.darkMode}
+              showTypeIcon={this.state.iconsLoaded}
             />
           ))}
         </div>

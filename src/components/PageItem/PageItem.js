@@ -21,9 +21,13 @@ class PageItem extends React.Component {
           {!this.props.page.title ? <div className="page__title-ghost"></div> : undefined}
         </div>
         <div className="page__type-container">
-          <PageType
-            page={this.props.page}
-          />
+          {
+            this.props.showTypeIcon
+              ? <PageType
+                  page={this.props.page}
+                />
+              : undefined
+          }
         </div>
         <div className="page__footer">
           <PagePublishDate

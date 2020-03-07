@@ -43,6 +43,12 @@ class App extends React.Component {
             </Route>
           </Switch>
         </Router>
+
+        {/*
+          * This element helps to preload font-family
+          */}
+        <div style={{fontFamily: 'Varela Round'}}>&nbsp;</div>
+        <div style={{fontFamily: 'Material Icons'}}>&nbsp;</div>
       </div>
     );
   }
