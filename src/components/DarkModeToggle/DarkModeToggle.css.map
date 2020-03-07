@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["DarkModeToggle.css"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;;;AAEF;EACE;;;AAEF;EACE;;;AAGF","file":"darkmodetoggle.css"}
+{"version":3,"sourceRoot":"","sources":["DarkModeToggle.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE;;AAEA;EACE","file":"DarkModeToggle.css"}

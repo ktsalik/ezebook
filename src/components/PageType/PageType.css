@@ -1,7 +1,6 @@
 .page-type .icon {
   color: #777;
 }
-
 .page-type .tooltip {
   position: fixed;
   border-radius: 2px;
@@ -12,17 +11,13 @@
   white-space: nowrap;
   transition: opacity 0.5s;
 }
-
 .page-type .tooltip.open {
   visibility: visible;
   opacity: 0.85;
 }
-
 .page-type .tooltip.closed {
   visibility: hidden;
   opacity: 0;
 }
 
-/*# sourceMappingURL=pagetype.css.map */
-
-/*# sourceMappingURL=pagetype.css.map */
+/*# sourceMappingURL=PageType.css.map */

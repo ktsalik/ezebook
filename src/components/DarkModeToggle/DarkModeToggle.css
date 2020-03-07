@@ -6,7 +6,6 @@
   background-color: #FFF;
   cursor: pointer;
 }
-
 .dark-mode-toggle .bullet {
   position: absolute;
   left: 0;
@@ -17,19 +16,14 @@
   background-color: #555;
   transition: left 0.222s;
 }
-
 .dark-mode-toggle .bullet.active {
   left: 50%;
 }
-
 .dark-mode-toggle.dark {
   background-color: #555;
 }
-
 .dark-mode-toggle.dark .bullet {
   background-color: #BBB;
 }
 
-/*# sourceMappingURL=darkmodetoggle.css.map */
-
-/*# sourceMappingURL=darkmodetoggle.css.map */
+/*# sourceMappingURL=DarkModeToggle.css.map */
