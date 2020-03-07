@@ -6,12 +6,6 @@ import PageType from '../PageType/PageType';
 class PageItem extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      
-    };
-
-    
   }
 
   render() {

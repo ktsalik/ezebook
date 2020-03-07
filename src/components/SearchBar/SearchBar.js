@@ -22,12 +22,14 @@ class SearchBar extends React.Component {
   }
 
   onInputFocus() {
+    // hide placeholder
     this.setState({
       showPlaceholder: false,
     });
   }
 
   onInputBlur() {
+    // if input if empty, show placeholder
     if (this.state.value.length === 0) {
       this.setState({
         showPlaceholder: true,
@@ -36,9 +38,11 @@ class SearchBar extends React.Component {
   }
 
   onInputChange(e) {
+    // update input
     this.setState({
       value: e.target.value,
     });
+    // trigger component change event after 333 ms
     clearTimeout(this.triggerChangeTimeout)
     this.triggerChangeTimeout = setTimeout(() => {
       this.props.onChange(this.state.value);

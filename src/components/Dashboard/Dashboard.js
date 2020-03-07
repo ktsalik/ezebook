@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
         page.publishedOnDate = moment(page.publishedOn).format('DD-MM-YYYY HH:mm');
         page.publishedOnAgo = moment(page.publishedOn).fromNow();
       });
-      // update state with pages data
+      // update component state with pages data
       this.setState({
         pages: data,
         view: {
@@ -54,6 +54,7 @@ class Dashboard extends React.Component {
 
   onSearchTermChange(value) {
     if (value.trim().length > 0) {
+      // filter list with search term
       this.setState({
         view: {
           ...this.state.view,
@@ -61,6 +62,7 @@ class Dashboard extends React.Component {
         },
       });
     } else {
+      // show again all pages
       this.setState({
         view: {
           ...this.state.view,

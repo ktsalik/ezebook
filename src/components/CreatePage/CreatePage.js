@@ -4,10 +4,6 @@ import './CreatePage.css';
 class CreatePage extends React.Component {
   constructor() {
     super();
-
-    this.state = {
-      
-    };
   }
 
   render() {

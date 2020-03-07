@@ -13,10 +13,13 @@ class DarkModeToggle extends React.Component {
   }
 
   onClick() {
+    // toggle state
     let newState = !this.state.active;
+    // update component state
     this.setState({
       active: newState,
     });
+    // trigger component change event
     this.props.onChange(newState ? 'on' : 'off');
   }
 
