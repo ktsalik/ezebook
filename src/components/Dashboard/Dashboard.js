@@ -32,6 +32,9 @@ class Dashboard extends React.Component {
         }
       }, 100);
     });
+    if (document.readyState == 'complete') {
+      this.getPages();
+    }
 
     let checkIconsFontsInterval = setInterval(() => {
       this.setState({
