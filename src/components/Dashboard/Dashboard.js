@@ -105,12 +105,15 @@ class Dashboard extends React.Component {
       <div className={`dashboard-view ${this.props.darkMode === 'on' ? 'dark' : 'light'}`}>
         <div className="toolbar">
           <Link to="/create-page" className="btn-create-page">
-            <div className="btn-create-page__title">Create Page</div>
-            {
-              this.state.iconsLoaded
-                ? <i className="material-icons">add</i>
-                : undefined
-            }
+            <div className="btn-create-page__title">
+              {
+                this.state.iconsLoaded
+                  ? <i className="material-icons">add</i>
+                  : undefined
+              } 
+              Create Page
+            </div>
+            
           </Link>
           <div className="search-bar-container">
             <SearchBar 
