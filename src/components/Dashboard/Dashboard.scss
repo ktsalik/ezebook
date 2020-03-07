@@ -17,6 +17,7 @@
 
     .btn-create-page {
       text-decoration: none;
+      align-self: center;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -49,6 +50,12 @@
       max-width: 100%;
       margin-left: -130px;
     }
+
+    .dark-mode-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
   }
 
   .pages-list {
@@ -70,11 +77,19 @@
   }
 }
 
-@media only screen and (max-width: 479px) {
-  .dashboard {
+@media only screen and (max-width: 789px) {
+  .dashboard-view {
     
     .toolbar {
       flex-direction: column-reverse;
+
+      .search-bar-container {
+        margin-left: 0;
+      }
     }
   }
+}
+
+@media only screen and (max-width: 479px) {
+
 }

@@ -16,6 +16,7 @@ class Dashboard extends React.Component {
     this.state = {
       pages: [],
       view: {
+        // 20 empty object with an id
         pages: new Array(20).fill().map((_, i) => ({ id: i })),
       },
     };
@@ -86,7 +87,7 @@ class Dashboard extends React.Component {
               darkMode={this.props.darkMode}
             />
           </div>
-          <div className="dark-mode">
+          <div className="dark-mode-container">
             <DarkModeToggle
               darkMode={this.props.darkMode}
               onChange={this.onDarkModeChange}

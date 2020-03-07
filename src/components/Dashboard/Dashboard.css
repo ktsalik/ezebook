@@ -15,6 +15,7 @@
 }
 .dashboard-view .toolbar .btn-create-page {
   text-decoration: none;
+  align-self: center;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -44,6 +45,11 @@
   max-width: 100%;
   margin-left: -130px;
 }
+.dashboard-view .toolbar .dark-mode-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 .dashboard-view .pages-list {
   display: flex;
   flex-direction: row;
@@ -59,9 +65,12 @@
   color: #EEE;
 }
 
-@media only screen and (max-width: 479px) {
-  .dashboard .toolbar {
+@media only screen and (max-width: 789px) {
+  .dashboard-view .toolbar {
     flex-direction: column-reverse;
+  }
+  .dashboard-view .toolbar .search-bar-container {
+    margin-left: 0;
   }
 }
 
