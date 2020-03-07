@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link,
+} from "react-router-dom";
 import moment from 'moment';
 import './Dashboard.css';
 import PageModel from '../../Page';
@@ -69,11 +72,12 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div className={`dashboard ${this.props.darkMode === 'on' ? 'dark' : 'light'}`}>
+      <div className={`dashboard-view ${this.props.darkMode === 'on' ? 'dark' : 'light'}`}>
         <div className="toolbar">
-          <div className="btn-new-page">
-            <button>+</button>
-          </div>
+          <Link to="/create-page" className="btn-create-page">
+            <div className="btn-create-page__title">Create Page</div>
+            <i className="material-icons">add</i>
+          </Link>
           <div className="search-bar-container">
             <SearchBar 
               onChange={this.onSearchTermChange}

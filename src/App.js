@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import './App.css';
-import Dashboard from './components/Dashboard/Dashboard.js';
+import Dashboard from './components/Dashboard/Dashboard';
+import CreatePage from './components/CreatePage/CreatePage';
 
 class App extends React.Component {
   constructor() {
@@ -30,10 +30,15 @@ class App extends React.Component {
       <div className={`App ${this.state.darkMode === 'on' ? 'dark' : 'light'}`}>
         <Router>
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Dashboard
                 darkMode={this.state.darkMode}
                 onDarkModeChange={this.onDarkModeChange}
+              />
+            </Route>
+            <Route path="/create-page">
+              <CreatePage
+                darkMode={this.state.darkMode}
               />
             </Route>
           </Switch>

@@ -1,5 +1,6 @@
 .App {
   background-color: #EEE;
+  transition: background-color 0.333s;
 }
 
 .App.dark {
