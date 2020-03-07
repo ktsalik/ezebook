@@ -4,7 +4,6 @@
   justify-content: flex-start;
   align-items: center;
 }
-
 .dashboard .toolbar {
   display: flex;
   flex-direction: row;
@@ -14,7 +13,6 @@
   max-width: calc(1200px - 10px - 10px);
   padding: 10px;
 }
-
 .dashboard .pages-list {
   display: flex;
   flex-direction: row;
@@ -24,89 +22,4 @@
   max-width: 1200px;
 }
 
-.dashboard .pages-list .page.item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 218px;
-  height: 250px;
-  border: 1px solid #EEE;
-  border-radius: 10px;
-  margin: 20px 10px;
-  cursor: pointer;
-  background-color: #F9F9F9;
-  transition: background-color 0.333s;
-}
-
-.dashboard .pages-list .page.item:hover {
-  border-color: #CCC;
-  background-color: #FFF;
-}
-
-.dashboard .pages-list .page.item:hover .page__title {
-  border-color: #CCC;
-}
-
-.dashboard .pages-list .page.item .page__title {
-  width: 210.5px;
-  padding-left: 7.5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #EEE;
-  font-size: 16px;
-  font-family: "Varela Round";
-}
-
-.dashboard .pages-list .page.item .page__type {
-  width: 218px;
-  text-align: center;
-}
-
-.dashboard .pages-list .page.item .page__type i {
-  font-size: 30px;
-}
-
-.dashboard .pages-list .page.item .page__footer {
-  width: 218px;
-  text-align: center;
-  font-size: 13px;
-  color: #888;
-}
-
-.dashboard.dark .page.item {
-  background-color: #222;
-  border-color: #AAA;
-}
-
-.dashboard.dark .page.item:hover {
-  border-color: #777;
-  background-color: #444;
-}
-
-.dashboard.dark .page.item:hover .page__title {
-  border-color: #777;
-  color: #CCC;
-}
-
-.dashboard.dark .page.item:hover .page__footer {
-  color: #CCC;
-}
-
-.dashboard.dark .page.item .page__title {
-  color: #BBB;
-  border-color: #AAA;
-}
-
-.dashboard.dark .page.item .page__footer {
-  color: #AAA;
-}
-
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-/*# sourceMappingURL=dashboard.css.map */
-
-/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=Dashboard.css.map */

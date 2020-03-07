@@ -2,9 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import './Dashboard.css';
 import PageModel from '../../Page';
-import PagePublishDate from '../PagePublishDate/PagePublishDate';
-import PageType from '../PageType/PageType';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
+import PageItem from '../PageItem/PageItem';
 
 class Dashboard extends React.Component {
   constructor() {
@@ -13,7 +12,7 @@ class Dashboard extends React.Component {
     this.state = {
       pages: [],
       view: {
-        pages: [],
+        pages: new Array(20).fill().map((_, i) => ({ id: i })),
       },
     };
 
@@ -66,24 +65,11 @@ class Dashboard extends React.Component {
         </div>
         <div className="pages-list">
           {this.state.view.pages.map(page => (
-            <div 
-              className="page item"
+            <PageItem
               key={page.id}
-            >
-              <div className="page__title">
-                {page.title}
-              </div>
-              <div className="page__type">
-                <PageType
-                  page={page}
-                />
-              </div>
-              <div className="page__footer">
-                <PagePublishDate
-                  page={page}
-                />
-              </div>
-            </div>
+              page={page}
+              darkMode={this.props.darkMode}
+            />
           ))}
         </div>
       </div>

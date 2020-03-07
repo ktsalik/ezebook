@@ -1,0 +1,90 @@
+.page.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 218px;
+  height: 250px;
+  border: 1px solid #EEE;
+  border-radius: 10px;
+  margin: 20px 10px;
+  cursor: pointer;
+  background-color: #F9F9F9;
+  transition: background-color 0.333s;
+}
+.page.item:hover {
+  border-color: #CCC;
+  background-color: #FFF;
+}
+.page.item:hover .page__title-container {
+  border-color: #CCC;
+}
+.page.item .page__title-container {
+  width: 210.5px;
+  padding-left: 7.5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #EEE;
+  font-size: 16px;
+  font-family: "Varela Round";
+  color: #343434;
+}
+.page.item .page__title-ghost {
+  width: 66.666%;
+  height: 15px;
+  background-color: #DDD;
+  margin: 5px;
+  border-radius: 2px;
+}
+.page.item .page__type-container {
+  width: 218px;
+  text-align: center;
+}
+.page.item .page__type-container i {
+  font-size: 30px;
+}
+.page.item .page__footer {
+  width: 218px;
+  font-size: 13px;
+  color: #888;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.page.item .page__footer .page__publish-date-ghost {
+  width: 50%;
+  height: 10px;
+  background-color: #DDD;
+  margin: 5px;
+  border-radius: 2px;
+}
+.page.item.dark {
+  background-color: #222;
+  border-color: #AAA;
+}
+.page.item.dark:hover {
+  border-color: #777;
+  background-color: #444;
+}
+.page.item.dark:hover .page__title-container {
+  border-color: #777;
+  color: #CCC;
+}
+.page.item.dark:hover .page__footer {
+  color: #CCC;
+}
+.page.item.dark .page__title-container {
+  color: #BBB;
+  border-color: #AAA;
+}
+.page.item.dark .page__title-container .page__title-ghost {
+  background-color: #444;
+}
+.page.item.dark .page__footer {
+  color: #AAA;
+}
+.page.item.dark .page__footer .page__publish-date-ghost {
+  background-color: #444;
+}
+
+/*# sourceMappingURL=PageItem.css.map */
