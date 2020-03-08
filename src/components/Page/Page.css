@@ -1,0 +1,44 @@
+.page .title-input {
+  outline: none;
+  width: 300px;
+  max-width: 100%;
+  border: 1px dashed #CCC;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #333;
+  margin-top: 25px;
+}
+.page .description-input {
+  outline: none;
+  margin-top: 35px;
+  font-size: 20px;
+  color: #333;
+  border: 1px dashed #CCC;
+  border-radius: 5px;
+  padding: 10px;
+}
+.page .types-container {
+  margin-top: 20px;
+}
+.page .types-container button {
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  color: #999;
+  background-color: #CCC;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.page .types-container button.active {
+  background-color: #FFF;
+  color: #333;
+  border-color: #333;
+}
+.page .publish-date {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=Page.css.map */

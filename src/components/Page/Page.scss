@@ -1,0 +1,50 @@
+.page {
+  
+  .title-input {
+    outline: none;
+    width: 300px;
+    max-width: 100%;
+    border: 1px dashed #CCC;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: #333;
+    margin-top: 25px;
+  }
+
+  .description-input {
+    outline: none;
+    margin-top: 35px;
+    font-size: 20px;
+    color: #333;
+    border: 1px dashed #CCC;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .types-container {
+    margin-top: 20px;
+
+    button {
+      outline: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 5px;
+      color: #999;
+      background-color: #CCC;
+      margin: 10px 5px;
+      cursor: pointer;
+      transition: background-color 0.5s;
+
+      &.active {
+        background-color: #FFF;
+        color: #333;
+        border-color: #333;
+      }
+    }
+  }
+
+  .publish-date {
+    margin-top: 20px;
+  }
+}

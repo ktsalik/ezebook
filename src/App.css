@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .App {
   background-color: #EEE;
   transition: background-color 0.333s;
