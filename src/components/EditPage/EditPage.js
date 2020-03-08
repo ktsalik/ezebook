@@ -32,8 +32,13 @@ class EditPage extends React.Component {
     PageModel.getPage(window.location.href.split('/').slice(-1)[0]).then(page => {
       this.setState({
         page: page,
+      }, () => {
+        localStorage.lastSeenPage = this.state.page.id;
       });
     });
+
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
   updatePage() {

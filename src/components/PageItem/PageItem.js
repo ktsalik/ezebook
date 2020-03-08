@@ -12,6 +12,7 @@ class PageItem extends React.Component {
     return (
       <div
         className={`page item ${this.props.darkMode === 'on' ? 'dark' : ''}`}
+        data-id={this.props.page.id}
       >
         <div
           className="page__title-container" 

@@ -25,6 +25,11 @@ class CreatePage extends React.Component {
     this.onPageChange = this.onPageChange.bind(this);
   }
 
+  componentDidMount() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
   onCreateClick() {
     if (this.state.creating) {
       return false;
