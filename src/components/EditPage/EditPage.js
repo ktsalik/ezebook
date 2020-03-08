@@ -19,6 +19,7 @@ class EditPage extends React.Component {
         type: -1,
         publishedOn: undefined,
       },
+      saving: false,
     };
 
     this.updateTimeout = undefined;
@@ -33,6 +34,9 @@ class EditPage extends React.Component {
   }
 
   updatePage() {
+    this.setState({
+      saving: true,
+    });
     PageModel.update(this.state.page.id, {
       id: this.state.page.id,
       title: this.state.page.title,
@@ -41,9 +45,15 @@ class EditPage extends React.Component {
       isActive: true,
       publishedOn: this.state.page.publishedOn,
     }).then(data => {
-      
+      setTimeout(() => {
+        this.setState({
+          saving: false,
+        });
+      }, 1000);
     }).catch(() => {
-      
+      this.setState({
+        saving: false,
+      });
     });
   }
 
@@ -73,6 +83,13 @@ class EditPage extends React.Component {
               <i className="material-icons">arrow_back</i>
             </Link>
             <div>Page&nbsp;{this.state.page.id}</div>
+            <div>
+              {
+                this.state.saving
+                  ? 'Saving Changes...'
+                  : ''
+              }
+            </div>
           </div>
           {
             this.state.page.id > -1
