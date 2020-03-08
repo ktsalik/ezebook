@@ -38,7 +38,7 @@ class Dashboard extends React.Component {
         }
       }, 100);
     });
-    if (document.readyState == 'complete') {
+    if (document.readyState === 'complete') {
       this.getPages();
     }
 
