@@ -44,5 +44,23 @@
 .page .publish-date {
   margin-top: 20px;
 }
+.page.dark .title-input {
+  background-color: #333;
+  border-color: #999;
+  color: #EFEFEF;
+}
+.page.dark .description-input {
+  background-color: #333;
+  border-color: #999;
+  color: #EFEFEF;
+}
+.page.dark .types-container button {
+  background-color: #333;
+  color: #999;
+  border: 0;
+}
+.page.dark .types-container button.active {
+  border: 1px solid #CCC;
+}
 
 /*# sourceMappingURL=Page.css.map */

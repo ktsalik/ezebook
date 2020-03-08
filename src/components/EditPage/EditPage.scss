@@ -11,6 +11,7 @@
     align-items: flex-start;
     width: 80vw;
     max-width: 768px;
+    min-height: 80vh;
     margin-top: calc(10vh - 50px);
     left: 10vw;
     border: 1px dashed #CCC;
@@ -53,6 +54,36 @@
         border-radius: 5px;
         background-color: #DDD;
         margin-top: 25px;
+      }
+    }
+  }
+
+  &.dark {
+
+    .edit-page-container {
+      background-color: #222;
+      border-color: #AAA;
+
+      .btn-back {
+        color: #EEE;
+      }
+
+      .header {
+
+        & > div {
+          color: #CCC;
+        }
+      }
+
+      .ghost-page {
+
+        .ghost-page__title {
+          background-color: #333;
+        }
+
+        .ghost-page__description {
+          background-color: #333;
+        }
       }
     }
   }

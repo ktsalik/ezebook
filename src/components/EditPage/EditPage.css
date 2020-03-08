@@ -11,6 +11,7 @@
   align-items: flex-start;
   width: 80vw;
   max-width: 768px;
+  min-height: 80vh;
   margin-top: calc(10vh - 50px);
   left: 10vw;
   border: 1px dashed #CCC;
@@ -47,6 +48,22 @@
   border-radius: 5px;
   background-color: #DDD;
   margin-top: 25px;
+}
+.edit-page-view.dark .edit-page-container {
+  background-color: #222;
+  border-color: #AAA;
+}
+.edit-page-view.dark .edit-page-container .btn-back {
+  color: #EEE;
+}
+.edit-page-view.dark .edit-page-container .header > div {
+  color: #CCC;
+}
+.edit-page-view.dark .edit-page-container .ghost-page .ghost-page__title {
+  background-color: #333;
+}
+.edit-page-view.dark .edit-page-container .ghost-page .ghost-page__description {
+  background-color: #333;
 }
 
 /*# sourceMappingURL=EditPage.css.map */

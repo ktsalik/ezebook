@@ -70,6 +70,7 @@ class CreatePage extends React.Component {
           <Page
             page={this.state.page}
             onChange={this.onPageChange}
+            darkMode={this.props.darkMode}
           />
           <button
             className="btn-create"

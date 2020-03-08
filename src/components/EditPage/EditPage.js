@@ -102,6 +102,7 @@ class EditPage extends React.Component {
               ? <Page
                   page={this.state.page}
                   onChange={this.onPageChange}
+                  darkMode={this.props.darkMode}
                 />
               : (
                 <div className="ghost-page">

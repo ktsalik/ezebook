@@ -49,4 +49,32 @@
   .publish-date {
     margin-top: 20px;
   }
+
+  &.dark {
+
+    .title-input {
+      background-color: #333;
+      border-color: #999;
+      color: #EFEFEF;
+    }
+
+    .description-input {
+      background-color: #333;
+      border-color: #999;
+      color: #EFEFEF;
+    }
+
+    .types-container {
+
+      button {
+        background-color: #333;
+        color: #999;
+        border: 0;
+
+        &.active {
+          border: 1px solid #CCC;
+        }
+      }
+    }
+  }
 }
