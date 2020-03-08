@@ -39,12 +39,12 @@ class CreatePage extends React.Component {
       },
     });
     PageModel.create({
-      "id": 1,
-      "title": this.state.page.title,
-      "description": this.state.page.description,
-      "type": this.state.page.type,
-      "isActive": true,
-      "publishedOn": this.state.page.publishedOn,
+      id: -1,
+      title: this.state.page.title,
+      description: this.state.page.description,
+      type: this.state.page.type,
+      isActive: true,
+      publishedOn: this.state.page.publishedOn,
     }).then(data => {
       window.history.back();
     }).catch(() => {

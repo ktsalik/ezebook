@@ -130,12 +130,17 @@ class Dashboard extends React.Component {
         </div>
         <div className="pages-list">
           {this.state.view.pages.map(page => (
-            <PageItem
+            <Link 
+              to={`/pages/${page.id}`}
               key={page.id}
-              page={page}
-              darkMode={this.props.darkMode}
-              showTypeIcon={this.state.iconsLoaded}
-            />
+            >
+              <PageItem
+                key={page.id}
+                page={page}
+                darkMode={this.props.darkMode}
+                showTypeIcon={this.state.iconsLoaded}
+              />
+            </Link>
           ))}
         </div>
       </div>

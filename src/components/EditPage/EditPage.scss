@@ -1,0 +1,40 @@
+.edit-page-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  .edit-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80vw;
+    max-width: 768px;
+    margin-top: calc(10vh - 50px);
+    left: 10vw;
+    border: 1px dashed #CCC;
+    border-radius: 10px;
+    background-color: #F9F9F9;
+    padding: 50px;
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .btn-back {
+        outline: none;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        color: #333;
+      }
+
+      & > div {
+        color: #333;
+        margin-left: 15px;
+      }
+    }
+  }
+}

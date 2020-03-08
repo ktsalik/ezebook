@@ -1,6 +1,10 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
 .page .title-input {
   outline: none;
-  width: 300px;
+  width: 480px;
   max-width: 100%;
   border: 1px dashed #CCC;
   border-radius: 5px;

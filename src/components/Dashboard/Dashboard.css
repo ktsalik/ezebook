@@ -60,6 +60,9 @@
   width: 100%;
   max-width: 1200px;
 }
+.dashboard-view .pages-list a {
+  text-decoration: none;
+}
 .dashboard-view.dark .btn-create-page {
   border-color: #AAA;
   background-color: #222;

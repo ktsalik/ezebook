@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
 import CreatePage from './components/CreatePage/CreatePage';
+import EditPage from './components/EditPage/EditPage';
 
 class App extends React.Component {
   constructor() {
@@ -38,6 +39,11 @@ class App extends React.Component {
             </Route>
             <Route path="/create-page">
               <CreatePage
+                darkMode={this.state.darkMode}
+              />
+            </Route>
+            <Route path="/pages/:pageId">
+              <EditPage
                 darkMode={this.state.darkMode}
               />
             </Route>

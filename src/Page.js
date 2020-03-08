@@ -19,7 +19,26 @@ const Page = {
         reject();
       });
     });
-  }
+  },
+  update(pageId, data) {
+    console.log(arguments);
+    return new Promise((resolve, reject) => {
+      axios.put(`${this.apiUrl}ResponsivePages/${pageId}`, data).then(response => {
+        resolve(response.data);
+      }).catch(() => {
+        reject();
+      });
+    });
+  },
+  getPage(pageId) {
+    return new Promise((resolve, reject) => {
+      axios.get(`${this.apiUrl}ResponsivePages/${pageId}`).then(response => {
+        resolve(response.data); 
+      }).catch(() => {
+        reject();
+      });
+    });
+  },
 };
 
 export default Page;
