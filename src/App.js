@@ -20,6 +20,18 @@ class App extends React.Component {
     this.onDarkModeChange = this.onDarkModeChange.bind(this);
   }
 
+  componentDidMount() {
+    if (localStorage.darkMode) {
+      this.setState({
+        darkMode: localStorage.darkMode,
+      });
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.darkMode = this.state.darkMode;
+  }
+
   onDarkModeChange(state) {
     this.setState({
       darkMode: state,
