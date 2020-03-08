@@ -21,7 +21,8 @@ class EditPage extends React.Component {
       },
       saving: false,
     };
-
+    
+    // will be used to add a delay between real-time updates and Api calls
     this.updateTimeout = undefined;
 
     this.onPageChange = this.onPageChange.bind(this);
@@ -29,10 +30,12 @@ class EditPage extends React.Component {
   }
 
   componentDidMount() {
+    // get page details
     PageModel.getPage(window.location.href.split('/').slice(-1)[0]).then(page => {
       this.setState({
         page: page,
       }, () => {
+        // store locally in order to highlight the page item on Dashboard later
         localStorage.lastSeenPage = this.state.page.id;
       });
     });
@@ -53,7 +56,7 @@ class EditPage extends React.Component {
       isActive: true,
       publishedOn: this.state.page.publishedOn,
     }).then(data => {
-      setTimeout(() => {
+      setTimeout(() => { // add a delay in order to be visible
         this.setState({
           saving: false,
         });
@@ -68,10 +71,11 @@ class EditPage extends React.Component {
   onPageChange(page) {
     this.setState({
       page: {
-        ...this.state.page,
-        ...page
+        ...this.state.page, // current page data
+        ...page // page data from Page component
       },
     }, () => {
+      // Api call to update the page
       clearTimeout(this.updateTimeout);
       this.updateTimeout = setTimeout(() => {
         this.updatePage();
@@ -81,6 +85,7 @@ class EditPage extends React.Component {
 
   deletePage() {
     PageModel.delete(this.state.page.id).then(() => {
+      // go back to Dashboard
       window.history.back();
     });
   }

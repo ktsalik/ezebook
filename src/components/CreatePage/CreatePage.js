@@ -18,7 +18,7 @@ class CreatePage extends React.Component {
         type: 0,
         publishedOn: moment().add(1, 'month').format("YYYY-MM-DD HH:mm:ss"),
       },
-      creating: false,
+      creating: false, // flag for active http request on api
     };
 
     this.onCreateClick = this.onCreateClick.bind(this);
@@ -26,12 +26,14 @@ class CreatePage extends React.Component {
   }
 
   componentDidMount() {
+    // scroll to top
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
   onCreateClick() {
     if (this.state.creating) {
+      // prevent multiple http requests
       return false;
     }
 
@@ -46,6 +48,7 @@ class CreatePage extends React.Component {
       isActive: true,
       publishedOn: this.state.page.publishedOn,
     }).then(data => {
+      // go back to Dashboard
       window.history.back();
     }).catch(() => {
       this.setState({

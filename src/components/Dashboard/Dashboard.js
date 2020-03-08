@@ -75,9 +75,10 @@ class Dashboard extends React.Component {
           pages: data,
         }
       }, () => {
+        // highlight last seen page
         if (localStorage.lastSeenPage) {
           let pageItemEl = document.querySelector('.page.item[data-id="' + localStorage.lastSeenPage + '"]');
-          localStorage.removeItem('lastSeenPage');
+          localStorage.removeItem('lastSeenPage'); // remove from local storage to prevent highlighting it again
           if (pageItemEl) {
             pageItemEl.style.backgroundColor = '#FF9900';
             pageItemEl.scrollIntoView(true);
@@ -91,7 +92,8 @@ class Dashboard extends React.Component {
     });
   }
 
-  onDarkModeChange(state) {
+  onDarkModeChange(state) { // on DarkModeToggle component
+    // call parent component onDarkModeChange event
     this.props.onDarkModeChange(state);
   }
 

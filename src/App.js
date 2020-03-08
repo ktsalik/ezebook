@@ -22,6 +22,7 @@ class App extends React.Component {
 
   componentDidMount() {
     if (localStorage.darkMode) {
+      // apply dark mode preference
       this.setState({
         darkMode: localStorage.darkMode,
       });
@@ -29,6 +30,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
+    // store dark mode preference
     localStorage.darkMode = this.state.darkMode;
   }
 
