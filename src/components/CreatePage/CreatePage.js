@@ -18,9 +18,7 @@ class CreatePage extends React.Component {
         type: 0,
         publishedOn: moment().add(1, 'month').format("YYYY-MM-DD HH:mm:ss"),
       },
-      view: {
-        creating: false,
-      },
+      creating: false,
     };
 
     this.onCreateClick = this.onCreateClick.bind(this);
@@ -28,15 +26,12 @@ class CreatePage extends React.Component {
   }
 
   onCreateClick() {
-    if (this.state.view.creating) {
+    if (this.state.creating) {
       return false;
     }
 
     this.setState({
-      view: {
-        ...this.state.view,
-        creating: true,
-      },
+      creating: true,
     });
     PageModel.create({
       id: -1,
@@ -49,10 +44,7 @@ class CreatePage extends React.Component {
       window.history.back();
     }).catch(() => {
       this.setState({
-        view: {
-          ...this.state.view,
-          creating: false,
-        },
+        creating: false,
       });
     });
   }
@@ -85,7 +77,7 @@ class CreatePage extends React.Component {
             onClick={this.onCreateClick}
           >
             {
-              this.state.view.creating
+              this.state.creating
                 ? 'Creating'
                 : 'Create'
             }

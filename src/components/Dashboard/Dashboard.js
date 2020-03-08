@@ -22,6 +22,12 @@ class Dashboard extends React.Component {
       iconsLoaded: false,
     };
 
+    this.onDarkModeChange = this.onDarkModeChange.bind(this);
+    this.onSearchTermChange = this.onSearchTermChange.bind(this);
+    this.getPages = this.getPages.bind(this);
+  }
+
+  componentDidMount() {
     let checkTextFontsInterval;
     window.addEventListener('load', () => {
       checkTextFontsInterval = setInterval(() => {
@@ -44,10 +50,6 @@ class Dashboard extends React.Component {
         clearInterval(checkIconsFontsInterval);
       }
     });
-
-    this.onDarkModeChange = this.onDarkModeChange.bind(this);
-    this.onSearchTermChange = this.onSearchTermChange.bind(this);
-    this.getPages = this.getPages.bind(this);
   }
 
   getPages() {
