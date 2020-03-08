@@ -78,12 +78,14 @@ class Dashboard extends React.Component {
         if (localStorage.lastSeenPage) {
           let pageItemEl = document.querySelector('.page.item[data-id="' + localStorage.lastSeenPage + '"]');
           localStorage.removeItem('lastSeenPage');
-          pageItemEl.style.backgroundColor = '#FF9900';
-          pageItemEl.scrollIntoView(true);
-          document.scrollingElement.scrollTop -= pageItemEl.offsetHeight;
-          setTimeout(() => {
-            pageItemEl.removeAttribute('style');
-          }, 222);
+          if (pageItemEl) {
+            pageItemEl.style.backgroundColor = '#FF9900';
+            pageItemEl.scrollIntoView(true);
+            document.scrollingElement.scrollTop -= pageItemEl.offsetHeight;
+            setTimeout(() => {
+              pageItemEl.removeAttribute('style');
+            }, 222);
+          }
         }
       });
     });
