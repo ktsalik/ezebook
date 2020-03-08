@@ -21,7 +21,6 @@ const Page = {
     });
   },
   update(pageId, data) {
-    console.log(arguments);
     return new Promise((resolve, reject) => {
       axios.put(`${this.apiUrl}ResponsivePages/${pageId}`, data).then(response => {
         resolve(response.data);
