@@ -6,29 +6,22 @@ class PagePublishDate extends React.Component {
     super(props);
 
     this.state = {
-      showTimeAgo: false,
+      showTimeAgo: true,
     };
 
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
-    this.onClick = this.onClick.bind(this);
   }
 
   onMouseEnter() {
     this.setState({
-      showTimeAgo: true,
+      showTimeAgo: false,
     });
   }
 
   onMouseLeave() {
     this.setState({
-      showTimeAgo: false,
-    });
-  }
-
-  onClick() {
-    this.setState({
-      showTimeAgo: false,
+      showTimeAgo: true,
     });
   }
 
@@ -38,7 +31,6 @@ class PagePublishDate extends React.Component {
         className="publish-date"
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
-        onClick={this.onClick}
       >
         {this.state.showTimeAgo ? this.props.page.publishedOnAgo : this.props.page.publishedOnDate}
       </div>

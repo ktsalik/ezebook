@@ -16,7 +16,7 @@ class CreatePage extends React.Component {
         title: '',
         description: '',
         type: 0,
-        publishedOn: moment().add(1, 'month').format("YYYY-MM-DD HH:mm:ss"),
+        publishedOn: moment().format("YYYY-MM-DD HH:mm:ss"),
       },
       creating: false, // flag for active http request on api
     };

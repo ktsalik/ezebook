@@ -64,7 +64,7 @@ class Page extends React.Component {
         date.add('year', parseInt(e.target.value));
         break;
       default:
-        
+        date = moment();
         break;
     }
     this.setState({
@@ -119,6 +119,7 @@ class Page extends React.Component {
           className="publish-date"
           onChange={this.onPublishDateChange}
         >
+          <option value="now">Now</option>
           <option value="1m">1 Month</option>
           <option value="5m">5 Months</option>
           <option value="10m">10 Months</option>
