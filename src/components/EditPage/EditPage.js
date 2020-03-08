@@ -25,6 +25,7 @@ class EditPage extends React.Component {
     this.updateTimeout = undefined;
 
     this.onPageChange = this.onPageChange.bind(this);
+    this.deletePage = this.deletePage.bind(this);
   }
 
   componentDidMount() {
@@ -73,6 +74,12 @@ class EditPage extends React.Component {
     });
   }
 
+  deletePage() {
+    PageModel.delete(this.state.page.id).then(() => {
+      window.history.back();
+    });
+  }
+
   render() {
     return (
       <div className={`edit-page-view ${this.props.darkMode === 'on' ? 'dark' : 'light'}`}>
@@ -111,6 +118,10 @@ class EditPage extends React.Component {
                 </div>
               )
           }
+          <button
+            className="btn-delete"
+            onClick={this.deletePage}
+          >Delete</button>
         </div>
       </div>
     );

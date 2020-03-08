@@ -29,6 +29,15 @@ const Page = {
       });
     });
   },
+  delete(pageId) {
+    return new Promise((resolve, reject) => {
+      axios.delete(`${this.apiUrl}ResponsivePages/${pageId}`).then(response => {
+        resolve(response.data);
+      }).catch(() => {
+        reject();
+      });
+    });
+  },
   getPage(pageId) {
     return new Promise((resolve, reject) => {
       axios.get(`${this.apiUrl}ResponsivePages/${pageId}`).then(response => {

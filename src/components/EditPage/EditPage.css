@@ -35,6 +35,18 @@
   color: #333;
   margin-left: 15px;
 }
+.edit-page-view .edit-page-container .btn-delete {
+  outline: none;
+  width: 70px;
+  height: 25px;
+  background: transparent;
+  border: 1px solid #c4302b;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #c4302b;
+  cursor: pointer;
+  margin: 25px 0;
+}
 .edit-page-view .edit-page-container .ghost-page .ghost-page__title {
   width: 480px;
   height: 35px;

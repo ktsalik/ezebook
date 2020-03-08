@@ -38,6 +38,19 @@
       }
     }
 
+    .btn-delete {
+      outline: none;
+      width: 70px;
+      height: 25px;
+      background: transparent;
+      border: 1px solid #c4302b;
+      border-radius: 5px;
+      font-size: 15px;
+      color: #c4302b;
+      cursor: pointer;
+      margin: 25px 0;
+    }
+
     .ghost-page {
 
       .ghost-page__title {
