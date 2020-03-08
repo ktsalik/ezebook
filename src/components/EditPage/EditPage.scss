@@ -36,5 +36,24 @@
         margin-left: 15px;
       }
     }
+
+    .ghost-page {
+
+      .ghost-page__title {
+        width: 480px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: #DDD;
+        margin-top: 25px;
+      }
+
+      .ghost-page__description {
+        width: 480px;
+        height: 300px;
+        border-radius: 5px;
+        background-color: #DDD;
+        margin-top: 25px;
+      }
+    }
   }
 }

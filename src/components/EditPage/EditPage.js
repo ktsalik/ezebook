@@ -24,13 +24,15 @@ class EditPage extends React.Component {
 
     this.updateTimeout = undefined;
 
+    this.onPageChange = this.onPageChange.bind(this);
+  }
+
+  componentDidMount() {
     PageModel.getPage(window.location.href.split('/').slice(-1)[0]).then(page => {
       this.setState({
         page: page,
       });
     });
-
-    this.onPageChange = this.onPageChange.bind(this);
   }
 
   updatePage() {
@@ -82,7 +84,11 @@ class EditPage extends React.Component {
             >
               <i className="material-icons">arrow_back</i>
             </Link>
-            <div>Page&nbsp;{this.state.page.id}</div>
+            {
+              this.state.page.id > -1
+                ? <div>Page&nbsp;{this.state.page.id}</div>
+                : <div>Fetching Page</div>
+            }
             <div>
               {
                 this.state.saving
@@ -97,7 +103,12 @@ class EditPage extends React.Component {
                   page={this.state.page}
                   onChange={this.onPageChange}
                 />
-              : ''
+              : (
+                <div className="ghost-page">
+                  <div className="ghost-page__title"></div>
+                  <div className="ghost-page__description"></div>
+                </div>
+              )
           }
         </div>
       </div>
